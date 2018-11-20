@@ -281,7 +281,7 @@
 	</v-card-text>
 
 <v-divider v-if="Object.keys(content.others).length>0"></v-divider>
-	<v-card-text v-if="Object.keys(content.others).length>0" class="pb-1 pt-1">
+	<v-card-text class="subheading" v-if="Object.keys(content.others).length>0" class="pb-1 pt-1">
 		Или в вы можете воспользоваться прочими счетами и способами
 	<ul style="width:100%">
 		<li v-for="(adress,gate) in content.others"> {{gate}} : <span v-html="adress"></span>
@@ -599,7 +599,7 @@
             "sitename": "Благоток",
 						"version":"2018-11-15",
 						"linktoaccount":"https://market.rudex.org/#/account/",
-						"link":"https://duckduckgo.com/"
+						"link":"https://ipfs.io/ipfs/QmU385MRkRkeWx3R3PUsmjrzdot7QQYKjKJLP922TeUyzf"
           },
 
           list: [],
@@ -872,7 +872,7 @@
 
 
                               try {
-                                var acc = await Api.instance().db_api().exec("get_account_by_name", [parsmemo.account]);
+                                var acc = await Api.instance().db_api().exec("get_account_by_name", [parsmemo.account.toLowerCase()]);
 
 																if (acc!=null){
 
