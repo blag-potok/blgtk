@@ -234,19 +234,19 @@
 <v-btn  color="success" block @click="supportdialog=true">Поддержать</v-btn>
 
 
-	<v-dialog v-model="supportdialog "  width="650px">
+	<v-dialog v-model="supportdialog "  width="700px">
 	      <v-card >
 	        <v-card-title class="headline grey lighten-2 pt-2 pb-2" primary-title x> <span class="black--text">Как поддержать?</span></v-card-title>
 					<template v-if="content.btsacc">
-					<v-card-text class="pb-0 pt-2">Если у вас уже есть счёт в BitShares, то вы можете: 	</v-card-text>
+					<v-card-text class="pb-1 pt-2">Если у вас уже есть счёт в BitShares, то вы можете: 	</v-card-text>
 					<v-card-actions>
 
-					<v-btn color="success" block @click="window.open('https://market.rudex.org/#/transfer?asset='+app.assetid+'&amount=100&to='+content.account+'&memo=%D0%91%D0%BB%D0%B0%D0%B3%D0%BE%D1%82%D0%BE%D0%BA')"> Перевести средства на счёт используя RuDEX</v-btn>
+					<v-btn color="success" block @click="window.open('https://market.rudex.org/#/transfer?&memo=%D0%91%D0%BB%D0%B0%D0%B3%D0%BE%D1%82%D0%BE%D0%BA')"> Перевести средства на счёт используя RuDEX</v-btn>
 </v-card-actions>
 <v-divider></v-divider>
-					<v-card-text class="pb-1 pt-1">Если у вас ещё нет счёта, то его можно завести там же или воспользоваться любым другим сайтом или кошельком BitShares:</v-card-text>
+					<v-card-text class="pb-1 pt-2">Если у вас ещё нет счёта, то его можно завести там же или воспользоваться любым другим сайтом или кошельком BitShares:</v-card-text>
 
-
+<v-card-text class="pb-2 pt-0">
 					<v-btn   color="primary" small @click="window.open('https://wallet.bitshares.eu/')">bitshares.eu </v-btn>
 					<v-btn   color="primary" small @click="window.open('https://openledger.io/market/')">OpenLedger </v-btn>
 					<v-btn   color="primary" small @click="window.open('https://exchange.easydex.net/')">GDEX </v-btn>
@@ -257,10 +257,10 @@
 					<v-btn   color="primary" small @click="window.open('https://trade.eubx.io/')">EUBX </v-btn>
 					<v-btn   color="primary" small @click="window.open('https://wallet.escodex.com/')">EscoDEX </v-btn>
 					<v-btn   color="primary" small @click="window.open('https://citadel.li/wallet/')">Citadel </v-btn>
-
+</v-card-text>
 <v-divider></v-divider>
 
-	<v-card-text class="pb-1 pt-1">
+	<v-card-text class="pb-1 pt-2">
 		Если вы не желаете открывать себе счёт, то можете воспользоваться одним из шлюзов для ввода и вывода средств в Bitshares или обменником и внести деньги прямо на счёт. Этим же способом можно пополнить свой счёт. <br>
 Сайты:
 <v-btn color="primary" small @click="window.open('https://mrkt.cash/offers/RUB/bitRUBLE/')"> mrkt.cash </v-btn>
